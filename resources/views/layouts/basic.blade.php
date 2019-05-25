@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,6 +39,32 @@
                   </ul>
                   <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+=======
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="{{ url('/')}}"> <img src="{{ asset('img/gear.jpg') }}" height="90px" width="90px" alt=""></a>
+>>>>>>> 40b9e9b612a9ca3253550e28b55495205bac6a6c
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -48,16 +75,37 @@
                                 </li>
                             @endif
                         @else
+<<<<<<< HEAD
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
+=======
+                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('finder.index') }}">
+                                    <span class="btn badge badge-pill badge-light">
+                                        {{ __('Card Finder') }}
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <span class="btn badge badge-pill badge-light">
+                                    {{ Auth::user()->name }} / {{ Auth::user()->type }} </span>
+                                    <span class="caret"></span>
+>>>>>>> 40b9e9b612a9ca3253550e28b55495205bac6a6c
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
+<<<<<<< HEAD
                                         {{ __('Logout') }}
+=======
+                                        
+                                        {{ __('Logout') }}
+                                        </span>
+>>>>>>> 40b9e9b612a9ca3253550e28b55495205bac6a6c
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -66,6 +114,7 @@
                                 </div>
                             </li>
                         @endguest
+<<<<<<< HEAD
                     </ul>
                 </div>
               </nav>
@@ -94,3 +143,15 @@
           </nav>
 </body>
 </html>
+=======
+        
+    
+    </nav>
+    <br/><br/><br/><br/><br/><br/>
+        <main class="py-4">
+            @yield('content')
+        </main>
+    
+</body>
+</html>
+>>>>>>> 40b9e9b612a9ca3253550e28b55495205bac6a6c

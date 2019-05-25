@@ -19,4 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
 Route::resource('set', 'Set\SetController');
+
+
+
+Route::resource('finder', 'Finder\FinderController');
+
+

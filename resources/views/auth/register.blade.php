@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @extends('layouts.app')
+=======
+@extends('layouts.basic')
+>>>>>>> 40b9e9b612a9ca3253550e28b55495205bac6a6c
 
 @section('content')
 <div class="container">
@@ -10,7 +14,15 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+<<<<<<< HEAD
 
+=======
+                        <div class="form-group">
+                          <label for=""></label>
+                          <input type="hidden" name="type" value="Guest">
+                          <small id="helpId" class="form-text text-muted">Help text</small>
+                        </div>
+>>>>>>> 40b9e9b612a9ca3253550e28b55495205bac6a6c
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
@@ -29,7 +41,10 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
+<<<<<<< HEAD
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+=======
+>>>>>>> 40b9e9b612a9ca3253550e28b55495205bac6a6c
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
