@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+<<<<<<< HEAD
+=======
+
+
+Route::resource('finder', 'Finder\FinderController');
+
+>>>>>>> 40b9e9b612a9ca3253550e28b55495205bac6a6c
