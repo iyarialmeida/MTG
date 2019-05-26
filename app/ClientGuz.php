@@ -18,12 +18,16 @@ class ClientGuz
         ]);
     }
 
-    public function getCollection(  ){ //array $query
+    public function getCollection( array $query ){ //
 
-        $response = $this->client->get( 'v1/sets' );
+    
+        $response = $this->client->get( "/v1".$query['collection'], [
+            'form_params' => $query['parameters']
+        ] );
 
         $collection = json_decode( $response->getBody() );
-        dd($collection);
+        
+        return $collection;
     }
 
 }

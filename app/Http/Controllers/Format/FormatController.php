@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Set;
+namespace App\Http\Controllers\Format;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-//----------------
+//-------------
 use App\ClientGuz;
 
-class SetController extends Controller
+class FormatController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,15 +19,13 @@ class SetController extends Controller
         $client = new ClientGuz();
 
         $query = [
-            'collection' => "/sets",
-            'parameters' => [
-                'name' => "Legions"
-            ]
+            'collection' => "/formats",
+            'parameters' => []
         ];
 
-        $sets = $client->getCollection( $query );
+        $formats = $client->getCollection( $query );
 
-        dd($sets);
+        dd($formats);
     }
 
     /**
@@ -54,23 +52,12 @@ class SetController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $client = new ClientGuz();
-
-        $query = [
-            'collection' => "/sets",
-            'parameters' => [
-                'name' => "Legions"
-            ]
-        ];
-
-        $sets = $client->getCollection( $query );
-
-        dd($sets);
+        //
     }
 
     /**
